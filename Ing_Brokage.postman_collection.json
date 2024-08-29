@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "1845cf75-2908-4999-be37-acb445333898",
+		"name": "Ing Brokage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2994143"
+	},
+	"item": [
+		{
+			"name": "Test Endpoints",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "dogan_oguzhan@hotmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "asdASD123!",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test-unauth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test-unauth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "asdASD123!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dogan_oguzhan@hotmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerId\": \"e2a81c0d-a1c2-420f-9d0d-e7352226a01e\",\n    \"assetId\": \"2\",\n    \"side\": \"BUY\",\n    \"size\": 15,\n    \"price\": 31.83\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "dogan_oguzhan@hotmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "asdASD123!",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/Eagfdv1919ab780ca",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"Eagfdv1919ab780ca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Match Order",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "dogan_oguzhan@hotmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "asdASD123!",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/2XZjOr1919abea5eb/match",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"2XZjOr1919abea5eb",
+						"match"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Orders",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "dogan_oguzhan@hotmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "asdASD123!",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders?page=0&limit=4&orderSide=SELL&orderStatus=PENDING",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "orderToken",
+							"value": "otoken1123",
+							"disabled": true
+						},
+						{
+							"key": "customerId",
+							"value": "custId123",
+							"disabled": true
+						},
+						{
+							"key": "customerEmail",
+							"value": "asd@email.com",
+							"disabled": true
+						},
+						{
+							"key": "orderAs",
+							"value": "DESC",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "4"
+						},
+						{
+							"key": "orderSide",
+							"value": "SELL"
+						},
+						{
+							"key": "orderStatus",
+							"value": "PENDING"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
