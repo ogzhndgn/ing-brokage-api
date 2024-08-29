@@ -10,7 +10,7 @@
     </parent>
     <groupId>org.thepoet</groupId>
     <artifactId>ing-brokage-api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>ing-brokage-api</name>
     <description>ing-brokage-api</description>
     <url/>
